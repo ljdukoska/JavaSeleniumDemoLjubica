@@ -1,0 +1,1 @@
+{"uuid":"18067655-3389-43c3-99db-3f89931ef00d","name":"Scenario: GoogleSearch","children":["a2f10fd1-e8ed-438f-abe6-02ce74aa897b"],"befores":[{"name":"steps.BaseSteps.setup()","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1662222782368,"stop":1662222786581}],"afters":[],"links":[],"start":1662222782363,"stop":1662222786618}
