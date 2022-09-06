@@ -102,7 +102,7 @@ public class BaseSteps extends BaseTest {
 
     public void reporterScreenshot(String name, String desc) throws IOException {
         takeScreenshot(name);
-        Path content = Paths.get("src/tests/screenshots/"+name+".png");
+        Path content = Paths.get("src/test/screenshots/"+name+".png");
         try(InputStream is = Files.newInputStream(content)) {
             Allure.addAttachment(desc,is);
         } catch (Exception e){
