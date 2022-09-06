@@ -25,7 +25,7 @@ public class ProductsPage {
     }
 
     public void addProductByName(String name){
-        driver.findElement(By.xpath("//div[@class='inventory_list']/div[5]//div[text()='"+name+"']/../../..//button")).click();
+        driver.findElement(By.cssSelector("#add-to-cart-sauce-labs-backpack")).click();
     }
 
     public int getCartItemNumber() {
