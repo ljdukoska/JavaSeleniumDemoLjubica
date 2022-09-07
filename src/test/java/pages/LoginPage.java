@@ -11,14 +11,15 @@ import org.testng.Assert;
 
 import java.util.Map;
 
-public class LoginPage {
+public class LoginPage extends CommonActions {
 
     WebDriver driver;
 
 
     public LoginPage(WebDriver driver) {
+        super(driver);
         this.driver = driver;
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(driver,this);
     }
 
 
@@ -36,15 +37,17 @@ public class LoginPage {
 
     public void enterUsername(String value){
 
-        username.sendKeys(value);
+        typeText(username,value);//username.sendKeys(value);
     }
 
     public void enterPassword(String value){
-        password.sendKeys(value);
+        typeText(password,value);
+        //password.sendKeys(value);
     }
 
     public void clickLoginButton(){
-        loginButton.click();
+        //loginButton.click();
+        clickElement(loginButton);
     }
 
     public void login(String username, String password){
