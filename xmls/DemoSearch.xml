@@ -3,6 +3,7 @@
 
 <suite name="Test">
     <test name="Test">
+        <parameter name="TEST" value="TEST"></parameter>
         <classes>
             <class name="runners.GoogleRunner"/>
         </classes>
