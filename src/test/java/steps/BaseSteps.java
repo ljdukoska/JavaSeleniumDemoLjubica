@@ -11,10 +11,12 @@ import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import pages.GooglePage;
 import pages.LoginPage;
 import pages.ProductsPage;
+import pages.CartPage;
 import tests.BaseTest;
 
 import java.io.File;
@@ -123,5 +125,19 @@ public class BaseSteps extends BaseTest {
 
         Assert.assertEquals(productsPage.getCartItemNumber(), Integer.parseInt(num));
         takeScreenshot("test");
+    }
+
+    @When("I click cart button")
+    public void iClickCartButton() {
+        ProductsPage productsPage = new ProductsPage(driver);
+        productsPage.clickShoppingCartLink();
+    }
+
+    @And("I should be on Cart page")
+    public void iShouldBeOnCartPage() throws IOException {
+        CartPage cartPage = new CartPage(driver);
+
+        Assert.assertEquals(CartPage.yourCartText(),"YOUR CART");
+        takeScreenshot("test2");
     }
 }

@@ -20,6 +20,16 @@ public class ProductsPage {
     @FindBy(css = ".shopping_cart_badge")
     WebElement cartItemNumber;
 
+    @FindBy(css = ".shopping_cart_link")
+    WebElement shoppingCartLink;
+
+
+
+    public void clickShoppingCartLink(){
+        shoppingCartLink.click();
+    }
+
+
     public String getProductTitleText(){
         return productsTitle.getText();
     }
