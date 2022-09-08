@@ -95,21 +95,6 @@ public class BaseSteps extends BaseTest {
     }
 
 
-    public void takeScreenshot(String fileName) throws IOException {
-        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(file, new File("src/test/screenshots/"+fileName+".png"));
-    }
-
-    public void reporterScreenshot(String name, String desc) throws IOException {
-        takeScreenshot(name);
-        Path content = Paths.get("src/test/screenshots/"+name+".png");
-        try(InputStream is = Files.newInputStream(content)) {
-            Allure.addAttachment(desc,is);
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
 
     @And("I add a product {string}")
     public void iAddAProduct(String productName) {

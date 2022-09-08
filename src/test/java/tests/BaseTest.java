@@ -35,7 +35,7 @@ public class BaseTest {
         FileUtils.copyFile(file,new File("src/results/screenshots/"+name+".png"));
     }
 
-    public void reportScreenshot(String name, String desc) throws IOException {
+    public void reporterScreenshot(String name, String desc) throws IOException {
         takeScreenshot(name);
         Path content = Paths.get("src/results/screenshots/"+name+".png");
         InputStream is = Files.newInputStream(content);
@@ -44,7 +44,7 @@ public class BaseTest {
 
     public void assertEqualsText(WebElement element, String expected, String log) throws IOException {
         scrollToElement(element);
-        reportScreenshot("Assert","Expected: "+expected+" Actual: "+element.getText());
+        reporterScreenshot("Assert","Expected: "+expected+" Actual: "+element.getText());
         Assert.assertEquals(element.getText(),expected,log);
     }
 
