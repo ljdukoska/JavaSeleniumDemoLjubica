@@ -7,7 +7,7 @@
         <parameter name="BROWSER" value="CHROME"/>
         <parameter name="WAIT" value="30"/>
         <classes>
-            <class name="runners.GoogleRunner"/>
+            <class name="runners.SauceDemoRunner"/>
         </classes>
     </test>
 </suite>

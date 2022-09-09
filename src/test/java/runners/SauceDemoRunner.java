@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
         plugin = {
             "io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"
         })
-public class GoogleRunner extends AbstractTestNGCucumberTests {
+public class SauceDemoRunner extends AbstractTestNGCucumberTests {
     @Override
     @DataProvider(parallel = true)
     public Object[][] scenarios(){

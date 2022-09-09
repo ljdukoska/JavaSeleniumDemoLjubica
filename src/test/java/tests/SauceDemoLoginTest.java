@@ -3,8 +3,6 @@ package tests;
 import excel.ExcelUtilities;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,7 +13,7 @@ import pages.ProductsPage;
 import java.io.IOException;
 import java.util.Map;
 
-public class SearchGoogleTests extends BaseTest{
+public class SauceDemoLoginTest extends BaseTest{
     @BeforeMethod
     public void setup() throws Exception {
         init("CHROME",30);
