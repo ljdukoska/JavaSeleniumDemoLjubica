@@ -34,7 +34,7 @@ public class BaseSteps extends BaseTest {
 
     @After
     public void tearDown(){
-//        quit();
+        quit();
     }
 
     @Given("I am on Sauce Demo Login Page")
