@@ -30,9 +30,11 @@ public class CartPage extends CommonActions {
     public void clickCheckOutButton(){
         clickElement(checkOut);
     }
-    public void clickContinueShopping(){
+    public void clickContinueShoppingButton(){
         clickElement(continueShopping);
     }
+
+
 
 
 

@@ -12,9 +12,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
-import pages.LoginPage;
-import pages.ProductsPage;
-import pages.CartPage;
+import pages.*;
 import tests.BaseTest;
 
 import java.io.File;
@@ -123,4 +121,57 @@ public class BaseSteps extends BaseTest {
         Assert.assertEquals(CartPage.yourCartText(),"YOUR CART");
         takeScreenshot("test2");
     }
+    @When("I click Continue Shopping button")
+    public void iClickContinueShoppingButton() {
+        CartPage cartPage = new CartPage(driver);
+        cartPage.clickContinueShoppingButton();
+    }
+    @When("I click CheckOut button")
+    public void iClickCheckOutButton() {
+        CartPage cartPage = new CartPage(driver);
+        cartPage.clickCheckOutButton();
+    }
+
+    @And("I should be on CheckOut page")
+    public void iShouldBeOnCheckOutPage() throws IOException {
+        CheckOutPage checkOutPage = new CheckOutPage(driver);
+        Assert.assertEquals(CheckOutPage.yourInformationText(), "CHECKOUT: YOUR INFORMATION");
+        takeScreenshot("test3");
+    }
+
+    @And ("I click Cancel button")
+    public void iClickCancelButton() {
+        CheckOutPage checkOutPage = new CheckOutPage(driver);
+        checkOutPage.clickCancelButton();
+    }
+
+    @And ("I enter First Name {string}")
+    public void iEnterFirstName(String firstName) {
+        CheckOutPage checkOutPage = new CheckOutPage(driver);
+        checkOutPage.enterFirstName(firstName);
+    }
+
+    @And ("I enter Last Name {string}")
+    public void iEnterLastName(String lastName) {
+        CheckOutPage checkOutPage = new CheckOutPage(driver);
+        checkOutPage.enterLastName(lastName);
+    }
+
+    @And ("I enter Postal Code {string}")
+    public void iEnterPostalCode(String postalCode) {
+        CheckOutPage checkOutPage = new CheckOutPage(driver);
+        checkOutPage.enterPostalCode(postalCode);
+    }
+    @And ("I click Continue button")
+    public void iClickContinueButton() {
+        CheckOutPage checkOutPage = new CheckOutPage(driver);
+        checkOutPage.clickContinueButton();
+    }
+    @And("I should be on CheckOut Overview page")
+    public void iShouldBeOnCheckOutOverviewPage() throws IOException {
+        CheckOutOverviewPage checkOutOverviewPage = new CheckOutOverviewPage(driver);
+        Assert.assertEquals(CheckOutOverviewPage.checkOutOverviewText(), "CHECKOUT: OVERVIEW");
+        takeScreenshot("test3");
+    }
+
 }

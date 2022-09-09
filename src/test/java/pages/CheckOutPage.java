@@ -15,6 +15,9 @@ public class CheckOutPage extends CommonActions {
         PageFactory.initElements(driver,this);
     }
 
+    @FindBy(css = ".title")
+    static
+    WebElement yourInformation;
     @FindBy(css = "#first-name")
     WebElement firstName;
     @FindBy(css = "#last-name")
@@ -47,6 +50,11 @@ public class CheckOutPage extends CommonActions {
     public void clickContinueButton(){
         clickElement(continueButton);
     }
+
+    public static String yourInformationText(){
+        return yourInformation.getText();
+    }
+
 
 
 }
