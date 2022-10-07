@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CartPage extends CommonActions {
-    WebDriver driver;
+    //WebDriver driver;
 
     public CartPage(WebDriver driver) {
         super(driver);
@@ -21,10 +21,10 @@ public class CartPage extends CommonActions {
     @FindBy(css = "#checkout")
     WebElement checkOut;
     @FindBy(css = ".title")
-    static
+
     WebElement yourCart;
 
-    public static String yourCartText(){
+    public  String yourCartText(){
         return yourCart.getText();
     }
     public void clickCheckOutButton(){

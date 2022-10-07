@@ -8,14 +8,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonActions {
 
-    WebDriver driver;
+    public WebDriver driver;
+    int wait = 30;
 
     public CommonActions(WebDriver driver) {
         this.driver = driver;
     }
 
     public void clickElement(WebElement element, String log){
-        WebDriverWait wdWait = new WebDriverWait(driver,30);
+        WebDriverWait wdWait = new WebDriverWait(driver,wait);
         wdWait.until(ExpectedConditions.elementToBeClickable(element));
 
         Actions actions = new Actions(driver);
@@ -25,7 +26,7 @@ public class CommonActions {
     }
 
     public void clickElement(WebElement element){
-        WebDriverWait wdWait = new WebDriverWait(driver,30);
+        WebDriverWait wdWait = new WebDriverWait(driver,wait);
         wdWait.until(ExpectedConditions.elementToBeClickable(element));
 
         Actions actions = new Actions(driver);
@@ -33,7 +34,7 @@ public class CommonActions {
     }
 
     public void typeText(WebElement element, String text, String log){
-        WebDriverWait wdWait = new WebDriverWait(driver,30);
+        WebDriverWait wdWait = new WebDriverWait(driver,wait);
         wdWait.until(ExpectedConditions.elementToBeClickable(element));
 
         Actions actions = new Actions(driver);
@@ -46,7 +47,7 @@ public class CommonActions {
     }
 
     public void typeText(WebElement element, String text){
-        WebDriverWait wdWait = new WebDriverWait(driver,30);
+        WebDriverWait wdWait = new WebDriverWait(driver,wait);
         wdWait.until(ExpectedConditions.elementToBeClickable(element));
 
         Actions actions = new Actions(driver);

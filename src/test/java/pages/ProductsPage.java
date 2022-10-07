@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ProductsPage extends CommonActions {
 
-    WebDriver driver;
+    //WebDriver driver;
 
     public ProductsPage(WebDriver driver) {
         super(driver);

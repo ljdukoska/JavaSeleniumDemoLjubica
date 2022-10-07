@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CheckOutOverviewPage extends CommonActions {
-    WebDriver driver;
+    //WebDriver driver;
 
     public CheckOutOverviewPage(WebDriver driver) {
         super(driver);
@@ -15,10 +15,10 @@ public class CheckOutOverviewPage extends CommonActions {
         PageFactory.initElements(driver,this);
     }
     @FindBy(css = ".title")
-    static
+
     WebElement checkoutOverview;
 
-    public static String checkOutOverviewText(){
+    public  String checkOutOverviewText(){
         return checkoutOverview.getText();
     }
 

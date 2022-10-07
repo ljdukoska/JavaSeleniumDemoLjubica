@@ -3,7 +3,7 @@
 
 <suite name="Test">
     <test name="Test">
-        <parameter name="TEST" value="TEST"></parameter>
+        <parameter name="TEST" value="TEST"/>
         <parameter name="BROWSER" value="CHROME"/>
         <parameter name="WAIT" value="30"/>
         <classes>

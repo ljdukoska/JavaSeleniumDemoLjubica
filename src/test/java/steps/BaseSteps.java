@@ -118,7 +118,7 @@ public class BaseSteps extends BaseTest {
     public void iShouldBeOnCartPage() throws IOException {
         CartPage cartPage = new CartPage(driver);
 
-        Assert.assertEquals(CartPage.yourCartText(),"YOUR CART");
+        Assert.assertEquals(cartPage.yourCartText(),"YOUR CART");
         takeScreenshot("test2");
     }
     @When("I click Continue Shopping button")
@@ -170,7 +170,7 @@ public class BaseSteps extends BaseTest {
     @And("I should be on CheckOut Overview page")
     public void iShouldBeOnCheckOutOverviewPage() throws IOException {
         CheckOutOverviewPage checkOutOverviewPage = new CheckOutOverviewPage(driver);
-        Assert.assertEquals(CheckOutOverviewPage.checkOutOverviewText(), "CHECKOUT: OVERVIEW");
+        Assert.assertEquals(checkOutOverviewPage.checkOutOverviewText(), "CHECKOUT: OVERVIEW");
         takeScreenshot("test3");
     }
 

@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class LoginPage extends CommonActions {
 
-    WebDriver driver;
+   // WebDriver driver;
 
 
     public LoginPage(WebDriver driver) {
